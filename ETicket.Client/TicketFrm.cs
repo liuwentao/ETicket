@@ -250,7 +250,7 @@ namespace ETicket.Client
             }
             catch (Exception ex)
             {
-                using (StreamWriter writer = new StreamWriter(@"c:\log.log"))
+                using (StreamWriter writer = new StreamWriter(@"d:\log.log"))
                 {
                     writer.Write(ex.StackTrace);
                 }

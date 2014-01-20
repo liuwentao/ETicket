@@ -104,7 +104,7 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.5965in</Height>
+              <Height>0.60301in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -125,7 +125,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Parameters!title.Value</Value>
                               <Style>
                                 <FontFamily>宋体</FontFamily>
                                 <FontSize>14pt</FontSize>
@@ -161,7 +161,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.3465in</Height>
+              <Height>0.34259in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -176,7 +176,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox96</rd:DefaultName>
@@ -225,7 +227,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>area</rd:DefaultName>
@@ -277,7 +281,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox58</rd:DefaultName>
@@ -326,7 +332,9 @@
                               <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>build</rd:DefaultName>
@@ -367,7 +375,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.3465in</Height>
+              <Height>0.34259in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -573,7 +581,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.39774in</Height>
+              <Height>0.39383in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -933,7 +941,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.61985in</Height>
+              <Height>0.61594in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -1289,7 +1297,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.3144in</Height>
+              <Height>0.31049in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -1495,7 +1503,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.23183in</Height>
+              <Height>0.24876in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -1604,7 +1612,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>1.04433in</Height>
+              <Height>0.54042in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -1677,7 +1685,7 @@
         <KeepTogether>true</KeepTogether>
         <DataSetName>TS</DataSetName>
         <Left>0.21167cm</Left>
-        <Height>9.90003cm</Height>
+        <Height>8.63003cm</Height>
         <Width>9.98624cm</Width>
         <Style>
           <Border>
@@ -1686,14 +1694,20 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>10.1167cm</Height>
+    <Height>8.78878cm</Height>
     <Style>
       <Border />
     </Style>
   </Body>
+  <ReportParameters>
+    <ReportParameter Name="title">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+  </ReportParameters>
   <Width>10.4625cm</Width>
   <Page>
-    <PageHeight>29.7cm</PageHeight>
+    <PageHeight>17cm</PageHeight>
     <PageWidth>12.05cm</PageWidth>
     <InteractiveHeight>27.9cm</InteractiveHeight>
     <InteractiveWidth>12.05cm</InteractiveWidth>

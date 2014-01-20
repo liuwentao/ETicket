@@ -35,7 +35,7 @@ namespace ETicket.Client
               "<DeviceInfo>" +
               "  <OutputFormat>EMF</OutputFormat>" +
                 "  <PageWidth>12.05cm</PageWidth>" +
-                "  <PageHeight>29.7cm</PageHeight>" +
+                "  <PageHeight>18.6cm</PageHeight>" +
                 "  <MarginTop>0in</MarginTop>" +
                 "  <MarginLeft>0in</MarginLeft>" +
                 "  <MarginRight>0in</MarginRight>" +

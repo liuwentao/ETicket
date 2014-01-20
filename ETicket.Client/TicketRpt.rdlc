@@ -80,7 +80,8 @@
       <Rectangle Name="Rectangle1">
         <ReportItems>
           <Line Name="Line1">
-            <Top>1.49077cm</Top>
+            <Top>1.46431cm</Top>
+            <Left>0.04127cm</Left>
             <Height>0cm</Height>
             <Width>13.71772cm</Width>
             <Style>
@@ -109,8 +110,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox8</rd:DefaultName>
-            <Top>0.18521cm</Top>
-            <Left>4.4617cm</Left>
+            <Top>0.15875cm</Top>
+            <Left>4.50297cm</Left>
             <Height>0.6cm</Height>
             <Width>4.88125cm</Width>
             <ZIndex>1</ZIndex>
@@ -1295,8 +1296,8 @@
             <RepeatColumnHeaders>true</RepeatColumnHeaders>
             <RepeatRowHeaders>true</RepeatRowHeaders>
             <DataSetName>datarow</DataSetName>
-            <Top>1.85209cm</Top>
-            <Left>0.4983cm</Left>
+            <Top>1.82563cm</Top>
+            <Left>0.53957cm</Left>
             <Height>6.64271cm</Height>
             <Width>10.47529cm</Width>
             <ZIndex>2</ZIndex>
@@ -1309,10 +1310,9 @@
           </Tablix>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>0.30903cm</Top>
-        <Left>0.04127cm</Left>
-        <Height>8.97105cm</Height>
-        <Width>13.71772cm</Width>
+        <Top>0.33549cm</Top>
+        <Height>8.94459cm</Height>
+        <Width>13.75899cm</Width>
         <Style>
           <Border>
             <Style>Dotted</Style>
@@ -1337,13 +1337,13 @@
   <Width>14.21195cm</Width>
   <Page>
     <PageHeight>9.2cm</PageHeight>
-    <PageWidth>12cm</PageWidth>
+    <PageWidth>12.05cm</PageWidth>
     <InteractiveHeight>20cm</InteractiveHeight>
     <InteractiveWidth>14.1cm</InteractiveWidth>
-    <LeftMargin>0.1cm</LeftMargin>
-    <RightMargin>0.1cm</RightMargin>
-    <TopMargin>0.1cm</TopMargin>
-    <BottomMargin>0.1cm</BottomMargin>
+    <LeftMargin>0cm</LeftMargin>
+    <RightMargin>0cm</RightMargin>
+    <TopMargin>0cm</TopMargin>
+    <BottomMargin>0cm</BottomMargin>
     <ColumnSpacing>0.13cm</ColumnSpacing>
     <Style />
   </Page>

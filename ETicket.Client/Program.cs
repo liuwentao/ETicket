@@ -16,9 +16,10 @@ namespace ETicket.Client
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new EnterFrm());
             Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
             Application.ThreadException += new System.Threading.ThreadExceptionEventHandler(Application_ThreadException);
+            Application.Run(new EnterFrm());
+          
         }
 
         static void Application_ThreadException(object sender, System.Threading.ThreadExceptionEventArgs e)
