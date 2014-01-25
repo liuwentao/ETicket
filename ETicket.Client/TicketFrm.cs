@@ -10,6 +10,7 @@ using ETicket.Client.Domain;
 using Microsoft.Reporting.WinForms;
 using ETicket.Client.Dal;
 using System.IO;
+using System.Threading;
 
 namespace ETicket.Client
 {
@@ -209,12 +210,38 @@ namespace ETicket.Client
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void button2_Click(object sender, EventArgs e)
+        private void btnPrint_Click(object sender, EventArgs e)
         {
             try
             {
                 DataSet ds = dtGrid.DataSource as DataSet;
 
+
+                Thread workThread = new Thread(new ParameterizedThreadStart(print));
+                btnPrint.Enabled = false;
+                btnSave.Enabled = false;
+                workThread.Start();
+            }
+            catch (Exception ex)
+            {
+                using (StreamWriter writer = new StreamWriter(@"d:\log.log"))
+                {
+                    writer.Write(ex.StackTrace);
+                }
+                MessageBox.Show(ex.StackTrace);
+            }
+
+        }
+
+        /// <summary>
+        /// 打印
+        /// </summary>
+        /// <param name="param"></param>
+        void print(Object param)
+        {
+            try
+            {
+                DataSet ds = param as DataSet;
                 if (ds != null)
                 {
                     var ticket = new Ticket();
@@ -244,9 +271,6 @@ namespace ETicket.Client
                     }
 
                 }
-
-
-
             }
             catch (Exception ex)
             {
@@ -256,9 +280,22 @@ namespace ETicket.Client
                 }
                 MessageBox.Show(ex.StackTrace);
             }
-
+            finally
+            {
+                jobDone();
+            }
         }
 
+        private void jobDone()
+        {
+            if (this.InvokeRequired)
+            {
+                this.Invoke(new MethodInvoker(jobDone));
+                return;
+            }
+            btnSave.Enabled = true;
+            btnPrint.Enabled = true;
+        }
         private void Print(Ticket ticket)
         {
 

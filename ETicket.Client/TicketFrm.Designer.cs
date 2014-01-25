@@ -46,7 +46,7 @@ namespace ETicket.Client
             this.pub = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblLastPrint = new System.Windows.Forms.Label();
@@ -62,9 +62,9 @@ namespace ETicket.Client
             // 
             // groupBox3
             // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.dtGrid);
             this.groupBox3.Location = new System.Drawing.Point(13, 73);
             this.groupBox3.Name = "groupBox3";
@@ -189,9 +189,9 @@ namespace ETicket.Client
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.btnPrint);
             this.groupBox2.Controls.Add(this.btnSave);
             this.groupBox2.Location = new System.Drawing.Point(12, 439);
             this.groupBox2.Name = "groupBox2";
@@ -200,15 +200,15 @@ namespace ETicket.Client
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "操作";
             // 
-            // button2
+            // btnPrint
             // 
-            this.button2.Location = new System.Drawing.Point(544, 14);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "打印";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnPrint.Location = new System.Drawing.Point(544, 14);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(75, 23);
+            this.btnPrint.TabIndex = 9;
+            this.btnPrint.Text = "打印";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // btnSave
             // 
@@ -311,7 +311,7 @@ namespace ETicket.Client
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dtGrid;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.DataGridViewTextBoxColumn public1;
         private Label lblLastPrint;
         private DataGridViewTextBoxColumn cell;
