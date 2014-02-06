@@ -220,7 +220,7 @@ namespace ETicket.Client
                 Thread workThread = new Thread(new ParameterizedThreadStart(print));
                 btnPrint.Enabled = false;
                 btnSave.Enabled = false;
-                workThread.Start();
+                workThread.Start(ds);
             }
             catch (Exception ex)
             {
