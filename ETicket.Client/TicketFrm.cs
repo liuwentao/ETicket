@@ -132,7 +132,7 @@ namespace ETicket.Client
 
             double price = calcEprice(decCurrent - lastMonth, limitDegree, epriect, limitFee);
             dtGrid["diff", e.RowIndex].Value = decCurrent - lastMonth;
-            dtGrid["amount", e.RowIndex].Value = (price + publicFee).ToString();
+            dtGrid["amount", e.RowIndex].Value = Math.Round((price + publicFee)).ToString();
         }
 
         /// <summary>
@@ -313,6 +313,43 @@ namespace ETicket.Client
             //刷新报表中的需要呈现的数据
             report.Refresh();
             RDLCPrinter.Run(report);
+        }
+
+        /// <summary>
+        /// 追加时候的处理逻辑
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            if (dtGrid.SelectedRows.Count > 0)
+            {
+                var ds = dtGrid.DataSource as DataSet;
+                if (ds != null)
+                {
+                    DataRow row = ds.Tables["data"].NewRow();
+                    DataRow srcRow = ds.Tables["data"].Rows[dtGrid.SelectedRows[0].Index];
+                    row["cell"] = srcRow["cell"];
+                    row["price"] = srcRow["price"];
+                    row["last"] = 0;
+                    row["limitFee"] = srcRow["limitFee"];
+                    row["limitdegree"] = srcRow["limitdegree"];
+                    //row["last"] = srcRow["last"];
+                    row["usertype"] = srcRow["usertype"];
+                    //row["current"] = srcRow["current"];
+                    //row["diff"] = srcRow["diff"];
+                    //row["amount"] = srcRow["amount"];
+                    row["public"] = srcRow["public"];
+
+                    row["owner"] = srcRow["owner"];
+                    row["area_name"] = srcRow["area_name"];
+                    row["build_name"] = srcRow["build_name"];
+                    ds.Tables["data"].Rows.InsertAt(row, dtGrid.SelectedRows[0].Index + 1);
+                    dtGrid.DataSource = ds;
+                    dtGrid.Refresh();
+                }
+                //dtGrid.Rows.Insert(dtGrid.SelectedRows[0].Index, dtGrid);
+            }
         }
     }
 }

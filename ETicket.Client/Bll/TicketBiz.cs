@@ -262,7 +262,7 @@ namespace ETicket.Client.Bll
        s.limitprice limitFee,
        s.limitdegree,
        t.name usertype,
-       0 current,
+       0.0 current,
        0 diff,
        s.publicfee public,
        0.0 amount
